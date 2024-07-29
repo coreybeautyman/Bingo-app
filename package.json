@@ -1,0 +1,15 @@
+{
+  "name": "bingo",
+  "version": "1.0.0",
+  "description": "Bingo app with vanilla JS",
+  "scripts": {
+    "test": "test",
+    "start": "parcel start",
+    "build": "parcel build index.html"
+  },
+  "author": "Corey Beautyman",
+  "license": "ISC d",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
