@@ -1,3 +1,7 @@
+// const backgorund = document.qu;
+const title = document.querySelector('.title');
+const darkBtn = document.querySelector('.dark-mode-btn');
+const body = document.querySelector('body');
 const nextBtn = document.querySelector('.next');
 const resetBtn = document.querySelector('.reset');
 const bingoCall = document.getElementById('bingo-call');
@@ -9,6 +13,7 @@ const countEl = document.getElementById('count');
 const bingoTable = document.getElementById('bingo-table');
 const blankTable = bingoTable.innerHTML;
 const prevNumText = document.querySelector('.prev-num-text');
+const tableCells = document.querySelectorAll('#bingo-table td');
 
 let currCall, currNum, prevNum01, prevNum02, prevNum03, originalBingoData;
 let count = 0;
@@ -174,6 +179,25 @@ function nextBingoCall() {
   countEl.innerHTML = count;
 }
 
+function darkModeToggle() {
+  console.log('nexr');
+  title.classList.toggle('dark');
+  nextBtn.classList.toggle('dark');
+  resetBtn.classList.toggle('dark');
+  body.classList.toggle('dark');
+  bingoTable.classList.toggle('dark-table');
+  darkBtn.classList.toggle('light');
+  darkBtn.classList.contains('light')
+    ? (darkBtn.innerHTML = '☀️')
+    : (darkBtn.innerHTML = '🌙');
+
+  tableCells.forEach(cell => cell.classList.toggle('dark-cell'));
+
+  // console.log(tableCells);
+}
+
 nextBtn.addEventListener('click', nextBingoCall);
 
 resetBtn.addEventListener('click', reset);
+
+darkBtn.addEventListener('click', darkModeToggle);

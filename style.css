@@ -38,7 +38,8 @@ body {
 }
 
 #bingo-table td {
-  border: 1px solid #ccc;
+  border: 1px solid;
+  border-color: black;
   padding: 10px;
   text-align: center;
   font-size: 16px;
@@ -61,4 +62,29 @@ button {
 
 .green {
   background-color: rgb(102, 241, 102);
+}
+
+.dark-mode-div {
+  position: absolute;
+  top: 50;
+  right: 50;
+}
+
+.dark-mode-btn {
+  background-color: black;
+}
+
+.dark {
+  color: white;
+  background-color: black;
+  border-color: white;
+}
+
+.light {
+  color: black;
+  background-color: white;
+}
+
+.dark-cell {
+  border-color: aliceblue !important;
 }

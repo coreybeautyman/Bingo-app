@@ -4,7 +4,7 @@
   "description": "Bingo app with vanilla JS",
   "scripts": {
     "test": "test",
-    "start": "parcel start",
+    "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "author": "Corey Beautyman",
